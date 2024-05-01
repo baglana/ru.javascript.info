@@ -1,2 +1,18 @@
 <!doctype html>
 <textarea style="width:200px; height: 60px;" id="area"></textarea>
+<script>
+  const textArea = document.querySelector('textarea');
+  
+  textArea.addEventListener('input', (e) => {
+    console.log(e.target.value)
+    localStorage.setItem('text', e.target.value)
+    console.log(localStorage.getItem('text'))
+  })
+
+  window.onload = (e) => {
+    console.log(textArea)
+    console.log(textArea.value);
+    textArea.value = localStorage.getItem('text')
+    console.log(textArea.value);
+  }
+</script>
