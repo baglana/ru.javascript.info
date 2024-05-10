@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      alert(`Number: ${readNumber()}`);
+
+      function readNumber() {
+        let inp = prompt("Number?", 0);
+
+        if (inp === null || inp === "") {
+          return null;
+        }
+
+        if (!isFinite(inp)) {
+          return readNumber();
+        }
+
+        return Number(inp);
+      }
+    </script>
+  </body>
+</html>
