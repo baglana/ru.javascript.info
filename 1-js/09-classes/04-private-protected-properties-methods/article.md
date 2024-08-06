@@ -208,7 +208,7 @@ class CoffeeMachine {
 let coffeeMachine = new CoffeeMachine();
 
 *!*
-// снаружи  нет доступа к приватным методам класса
+// снаружи нет доступа к приватным методам класса
 coffeeMachine.#checkWater(); // Error
 coffeeMachine.#waterLimit = 1000; // Error
 */!*
@@ -260,7 +260,7 @@ class MegaCoffeeMachine extends CoffeeMachine {
 ````warn
 Приватные поля особенные.
 
-Как мы помним, обычно мы можем получить доступ к полям объекта с помощью this[name]:
+Как мы помним, обычно мы можем получить доступ к полям объекта с помощью `this[name]`:
 
 ```js
 class User {
