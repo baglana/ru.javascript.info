@@ -3,17 +3,17 @@ function printNumbers(from, to) {
       console.log(from++);
 
       if (from > to) {
-          clearInterval(timerId);
+        clearInterval(timerId);
       }
   }, 1000);
 }
 
 function printNumbers(from, to) {
-  let timerId = setTimeout(function print() {       
+  setTimeout(function print() {       
       console.log(from++);
 
       if (from <= to) {
-          timerId = setTimeout(print, 1000);
+          setTimeout(print, 1000);
       }
   }, 1000);
 }
